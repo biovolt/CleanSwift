@@ -44,16 +44,4 @@ class ___VARIABLE_sceneName___ViewControllerTests: XCTestCase {
         window.addSubview(sut.view)
         RunLoop.current.run(until: Date())
     }
-
-    // MARK: Test doubles
-
-    // MARK: Tests
-
-    func testSomething() {
-        // Given
-
-        // When
-
-        // Then
-    }
 }

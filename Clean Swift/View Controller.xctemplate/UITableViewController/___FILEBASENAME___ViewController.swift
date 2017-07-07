@@ -62,19 +62,5 @@ class ___VARIABLE_sceneName___ViewController: UITableViewController, ___VARIABLE
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        doSomething()
-    }
-
-    // MARK: Do something
-
-    //@IBOutlet weak var nameTextField: UITextField!
-
-    func doSomething() {
-        let request = ___VARIABLE_sceneName___.Something.Request()
-        interactor?.doSomething(request: request)
-    }
-
-    func displaySomething(viewModel: ___VARIABLE_sceneName___.Something.ViewModel) {
-        //nameTextField.text = viewModel.name
     }
 }

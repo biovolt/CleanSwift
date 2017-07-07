@@ -34,16 +34,4 @@ class ___VARIABLE_sceneName___PresenterTests: XCTestCase {
     func setup___VARIABLE_sceneName___Presenter() {
         sut = ___VARIABLE_sceneName___Presenter()
     }
-
-    // MARK: Test doubles
-
-    // MARK: Tests
-
-    func testSomething() {
-        // Given
-
-        // When
-
-        // Then
-    }
 }
