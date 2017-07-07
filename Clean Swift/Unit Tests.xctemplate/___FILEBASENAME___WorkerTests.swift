@@ -34,16 +34,4 @@ class ___VARIABLE_sceneName___WorkerTests: XCTestCase {
     func setup___VARIABLE_sceneName___Worker() {
         sut = ___VARIABLE_sceneName___Worker()
     }
-
-    // MARK: Test doubles
-
-    // MARK: Tests
-
-    func testSomething() {
-        // Given
-
-        // When
-
-        // Then
-    }
 }

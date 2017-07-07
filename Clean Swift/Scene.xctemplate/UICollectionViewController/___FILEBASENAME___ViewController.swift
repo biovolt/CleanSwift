@@ -13,7 +13,6 @@
 import UIKit
 
 protocol ___VARIABLE_sceneName___DisplayLogic: class {
-    func displaySomething(viewModel: ___VARIABLE_sceneName___.Something.ViewModel)
 }
 
 class ___VARIABLE_sceneName___ViewController: UICollectionViewController, ___VARIABLE_sceneName___DisplayLogic {
@@ -62,19 +61,5 @@ class ___VARIABLE_sceneName___ViewController: UICollectionViewController, ___VAR
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        doSomething()
-    }
-
-    // MARK: Do something
-
-    //@IBOutlet weak var nameTextField: UITextField!
-
-    func doSomething() {
-        let request = ___VARIABLE_sceneName___.Something.Request()
-        interactor?.doSomething(request: request)
-    }
-
-    func displaySomething(viewModel: ___VARIABLE_sceneName___.Something.ViewModel) {
-        //nameTextField.text = viewModel.name
     }
 }

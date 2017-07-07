@@ -34,16 +34,4 @@ class ___VARIABLE_sceneName___InteractorTests: XCTestCase {
     func setup___VARIABLE_sceneName___Interactor() {
         sut = ___VARIABLE_sceneName___Interactor()
     }
-
-    // MARK: Test doubles
-
-    // MARK: Tests
-
-    func testSomething() {
-        // Given
-
-        // When
-
-        // Then
-    }
 }
