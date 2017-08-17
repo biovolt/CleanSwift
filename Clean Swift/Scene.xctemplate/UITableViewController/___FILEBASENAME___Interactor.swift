@@ -19,6 +19,15 @@ protocol ___VARIABLE_sceneName___DataStore {
 }
 
 class ___VARIABLE_sceneName___Interactor: ___VARIABLE_sceneName___BusinessLogic, ___VARIABLE_sceneName___DataStore {
-    var presenter: ___VARIABLE_sceneName___PresentationLogic?
-    var worker: ___VARIABLE_sceneName___Worker?
+    private(set) var presenter: ___VARIABLE_sceneName___PresentationLogic
+    private var worker: ___VARIABLE_sceneName___Worker
+
+    init(presenter: ___VARIABLE_sceneName___PresentationLogic, worker: ___VARIABLE_sceneName___Worker) {
+        self.presenter = presenter
+        self.worker = worker
+    }
+
+    convenience init() {
+        self.init(___VARIABLE_sceneName___Presenter(), ___VARIABLE_sceneName___Worker())
+    }
 }

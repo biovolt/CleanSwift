@@ -16,34 +16,25 @@ protocol ___VARIABLE_sceneName___DisplayLogic: class {
 }
 
 class ___VARIABLE_sceneName___ViewController: UICollectionViewController, ___VARIABLE_sceneName___DisplayLogic {
-    var interactor: ___VARIABLE_sceneName___BusinessLogic?
-    var router: (NSObjectProtocol & ___VARIABLE_sceneName___RoutingLogic & ___VARIABLE_sceneName___DataPassing)?
+    var interactor: ___VARIABLE_sceneName___BusinessLogic
+    var router: (NSObjectProtocol & ___VARIABLE_sceneName___RoutingLogic & ___VARIABLE_sceneName___DataPassing)
 
     // MARK: Object lifecycle
 
     override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
+        interactor = ___VARIABLE_sceneName___Interactor()
+        router = ___VARIABLE_sceneName___Router()
         super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
-        setup()
+        ((interactor as? ___VARIABLE_sceneName___Interactor)?.presenter as? ___VARIABLE_sceneName___Presenter)?.viewController = self
+        (router as? ___VARIABLE_sceneName___Router)?.viewController = self
     }
 
     required init?(coder aDecoder: NSCoder) {
+        interactor = ___VARIABLE_sceneName___Interactor()
+        router = ___VARIABLE_sceneName___Router()
         super.init(coder: aDecoder)
-        setup()
-    }
-
-    // MARK: Setup
-
-    private func setup() {
-        let viewController = self
-        let interactor = ___VARIABLE_sceneName___Interactor()
-        let presenter = ___VARIABLE_sceneName___Presenter()
-        let router = ___VARIABLE_sceneName___Router()
-        viewController.interactor = interactor
-        viewController.router = router
-        interactor.presenter = presenter
-        presenter.viewController = viewController
-        router.viewController = viewController
-        router.dataStore = interactor
+        ((interactor as? ___VARIABLE_sceneName___Interactor)?.presenter as? ___VARIABLE_sceneName___Presenter)?.viewController = self
+        (router as? ___VARIABLE_sceneName___Router)?.viewController = self
     }
 
     // MARK: Routing
@@ -51,7 +42,7 @@ class ___VARIABLE_sceneName___ViewController: UICollectionViewController, ___VAR
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let scene = segue.identifier {
             let selector = NSSelectorFromString("routeTo\(scene)WithSegue:")
-            if let router = router, router.responds(to: selector) {
+            if router.responds(to: selector) {
                 router.perform(selector, with: segue)
             }
         }
