@@ -13,7 +13,6 @@
 import UIKit
 
 protocol ___VARIABLE_sceneName___DisplayLogic: class {
-    func displaySomething(viewModel: ___VARIABLE_sceneName___.Something.ViewModel)
 }
 
 class ___VARIABLE_sceneName___ViewController: UIViewController, ___VARIABLE_sceneName___DisplayLogic {
@@ -56,11 +55,5 @@ class ___VARIABLE_sceneName___ViewController: UIViewController, ___VARIABLE_scen
                 router.perform(selector, with: segue)
             }
         }
-    }
-
-    // MARK: View lifecycle
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
     }
 }

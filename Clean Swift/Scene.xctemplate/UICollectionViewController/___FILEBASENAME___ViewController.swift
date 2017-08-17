@@ -56,10 +56,4 @@ class ___VARIABLE_sceneName___ViewController: UICollectionViewController, ___VAR
             }
         }
     }
-
-    // MARK: View lifecycle
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-    }
 }

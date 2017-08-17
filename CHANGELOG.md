@@ -2,6 +2,10 @@
 
 All notable changes to this project will be documented in this file.
 
+## 3.0.2
+
+- Removed all sample code
+
 ## 3.0.1
 
 - Reformated all documents
@@ -41,7 +45,7 @@ All notable changes to this project will be documented in this file.
 
 ## 1.1.0
 
-- Added **Unit Tests** template to generate XCTest unit test files for 
+- Added **Unit Tests** template to generate XCTest unit test files for
 	- View controller
 	- Interactor
 	- Presenter
