@@ -28,6 +28,6 @@ class ___VARIABLE_sceneName___Interactor: ___VARIABLE_sceneName___BusinessLogic,
     }
 
     convenience init() {
-        self.init(___VARIABLE_sceneName___Presenter(), ___VARIABLE_sceneName___Worker())
+        self.init(presenter: ___VARIABLE_sceneName___Presenter(), worker: ___VARIABLE_sceneName___Worker())
     }
 }
