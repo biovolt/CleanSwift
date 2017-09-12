@@ -17,7 +17,7 @@ protocol ___VARIABLE_sceneName___BusinessLogic {
 
 class ___VARIABLE_sceneName___Interactor: ___VARIABLE_sceneName___BusinessLogic {
     let presenter: ___VARIABLE_sceneName___PresentationLogic
-    let worker: ___VARIABLE_sceneName___Worker
+    private let worker: ___VARIABLE_sceneName___Worker
 
     init(presenter: ___VARIABLE_sceneName___PresentationLogic, worker: ___VARIABLE_sceneName___Worker) {
         self.presenter = presenter
