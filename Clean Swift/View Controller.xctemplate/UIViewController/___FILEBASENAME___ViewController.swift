@@ -15,7 +15,7 @@ import UIKit
 protocol ___VARIABLE_sceneName___DisplayLogic: class {
 }
 
-class ___VARIABLE_sceneName___ViewController: UIViewController, ___VARIABLE_sceneName___DisplayLogic {
+class ___VARIABLE_sceneName___ViewController: TrackingViewController, ___VARIABLE_sceneName___DisplayLogic {
     let interactor: ___VARIABLE_sceneName___BusinessLogic
     let router: (NSObjectProtocol & ___VARIABLE_sceneName___RoutingLogic)
 
